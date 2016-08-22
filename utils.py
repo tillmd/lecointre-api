@@ -28,5 +28,5 @@ def get_menu():
 def is_section(td):
     id_has_len_5 = len(td.get('id')) == 5
     text_is_short = len(td.text) < 10
-    is_pdc = td.text.lower() == "plat du chef"
+    is_pdc = "du chef" in td.text.lower()
     return (id_has_len_5 and text_is_short) or is_pdc
